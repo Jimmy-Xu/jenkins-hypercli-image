@@ -74,19 +74,19 @@ open http://23.236.114.227:8080 in browser
 ## init jenkins following the wizard
 
 ### unlock jenkins
-![](assets/jenkins/1.unlock-jenkins.PNG)
+![](assets/jenkins-init/1.unlock-jenkins.PNG)
 
 ### customize plugins
-![](assets/jenkins/2.customize-plugins.PNG)
+![](assets/jenkins-init/2.customize-plugins.PNG)
 
 ### install plugins
-![](assets/jenkins/3.install-suggested-plugins.PNG)
+![](assets/jenkins-init/3.install-suggested-plugins.PNG)
 
 ### create first admin user
-![](assets/jenkins/4.create-first-admin-user.png)
+![](assets/jenkins-init/4.create-first-admin-user.png)
 
 ### jenkins is ready
-![](assets/jenkins/5.jenkins-is-ready.png)
+![](assets/jenkins-init/5.jenkins-is-ready.png)
 
 ### login jenkins
-![](assets/jenkins/6.welcome-to-jenkins.png)
+![](assets/jenkins-init/6.welcome-to-jenkins.png)
