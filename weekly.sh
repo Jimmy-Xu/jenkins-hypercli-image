@@ -4,8 +4,8 @@ set -e
 set -x
 
 #set http proxy to speed up
-PROXY_IP="172.17.0.1"
-PROXY_PORT="8118"
+PROXY_IP=""
+PROXY_PORT=""
 
 JENKINS_VERSION=`curl -sq https://api.github.com/repos/jenkinsci/jenkins/tags | grep '"name":' | grep -o '[0-9]\.[0-9]*'  | uniq | sort --version-sort | tail -1`
 echo $JENKINS_VERSION
