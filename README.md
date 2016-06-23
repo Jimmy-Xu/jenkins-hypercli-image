@@ -1,5 +1,7 @@
 Dockerfile for build image `hyperhq/jenkins-hypercli`
 
+[How to](https://github.com/hyperhq/jenkins-hypercli-image/wiki)
+
 # build image
 ```
 ./weekly.sh
