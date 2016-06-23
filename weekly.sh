@@ -11,12 +11,12 @@ echo $JENKINS_SHA
 
 docker build --build-arg JENKINS_VERSION=$JENKINS_VERSION \
              --build-arg JENKINS_SHA=$JENKINS_SHA \
-             --no-cache --pull \
-             --tag jenkinsci/jenkins:$JENKINS_VERSION .
+             --pull \
+             --tag hyperhq/jenkins-hypercli:$JENKINS_VERSION .
 
-docker tag -f jenkinsci/jenkins:$JENKINS_VERSION jenkinsci/jenkins:latest
+docker tag -f hyperhq/jenkins-hypercli:$JENKINS_VERSION hyperhq/jenkins-hypercli:latest
 
-docker push jenkinsci/jenkins:$JENKINS_VERSION
-docker push jenkinsci/jenkins:latest
+docker push hyperhq/jenkins-hypercli:$JENKINS_VERSION
+docker push hyperhq/jenkins-hypercli:latest
 
 
