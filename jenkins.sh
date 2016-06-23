@@ -2,6 +2,40 @@
 
 set -e
 
+##### generate .hyper/config.json begin #####
+generate_hyper_config() {
+	if [[ ! -n ${ACCESS_KEY} ]] || [[ ! -n ${SECRET_KEY} ]]; then
+		cat <<EOF
+Please specified hyper credential by env 'ACCESS_KEY' and 'SECRET_KEY'
+eg:
+	hyper run -it --rm -e ACCES_KEY="xxx" -e SECRET_KEY="xxx" hyperhq/jenkins-hypercli:2.10 bash
+
+EOF
+		exit 1
+	fi
+	HYPER_CONF_DIR=${JENKINS_HOME}/.hyper
+	HYPER_CONF_FILE=${HYPER_CONF_DIR}/config.json
+	mkdir -p ${HYPER_CONF_DIR}
+	cat > ${HYPER_CONF_FILE} <<EOF
+{
+	"auths": {},
+	"clouds": {
+		"tcp://us-west-1.hyper.sh:443": {
+			"accesskey": "${ACCESS_KEY}",
+			"secretkey": "${SECRET_KEY}"
+		}
+	}
+}
+EOF
+	echo "[ ${HYPER_CONF_FILE} ]"
+	echo "--------------------------"
+	cat ${HYPER_CONF_FILE}
+	echo "--------------------------"
+}
+generate_hyper_config
+##### generate .hyper/config.json end #####
+
+
 # Copy files from /usr/share/jenkins/ref into $JENKINS_HOME
 # So the initial JENKINS-HOME is set with expected content.
 # Don't override, as this is just a reference setup, and use from UI
