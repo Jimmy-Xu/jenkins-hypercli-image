@@ -1,6 +1,7 @@
 Dockerfile for build image `hyperhq/jenkins-hypercli`
 
-[How to](https://github.com/hyperhq/jenkins-hypercli-image/wiki)
+# doc
+[How to integrate Jenkins with Hyper_](https://github.com/hyperhq/jenkins-hypercli-image/wiki)
 
 # build image
 ```
